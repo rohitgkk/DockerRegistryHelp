@@ -1,0 +1,337 @@
+/* ========== Text Styles ========== */
+hr { color: #000000}
+.main-content, .main-content table span.rvts0 /* Normal text */
+{
+ font-size: 10pt;
+ font-family: 'Arial', 'Helvetica', sans-serif;
+ font-style: normal;
+ font-weight: normal;
+ color: #000000;
+ text-decoration: none;
+}
+span.rvts1 /* Heading */
+{
+ font-weight: bold;
+ color: #0000ff;
+}
+span.rvts2 /* Subheading */
+{
+ font-weight: bold;
+ color: #000080;
+}
+span.rvts3 /* Keywords */
+{
+ font-style: italic;
+ color: #800000;
+}
+a.rvts4, span.rvts4 /* Jump 1 */
+{
+ color: #008000;
+ text-decoration: underline;
+}
+a.rvts5, span.rvts5 /* Jump 2 */
+{
+ color: #008000;
+ text-decoration: underline;
+}
+span.rvts6
+{
+}
+span.rvts7
+{
+ font-weight: bold;
+ color: #0000ff;
+}
+span.rvts8
+{
+ font-weight: bold;
+ color: #000080;
+}
+span.rvts9
+{
+ font-style: italic;
+ color: #800000;
+}
+a.rvts10, span.rvts10
+{
+ color: #008000;
+ text-decoration: underline;
+}
+span.rvts11
+{
+ font-size: 20pt;
+ font-family: 'Trebuchet MS', 'Helvetica', sans-serif;
+ font-weight: bold;
+ color: #003366;
+}
+span.rvts12
+{
+ font-size: 11pt;
+ font-family: 'Trebuchet MS', 'Helvetica', sans-serif;
+ color: #003366;
+}
+span.rvtsky{
+ font-size: 11pt;
+ font-family: 'Trebuchet MS', 'Helvetica', sans-serif;
+ color: #ff0000;
+}
+span.rvts13
+{
+ font-size: 21pt;
+ font-family: 'Trebuchet MS', 'Helvetica', sans-serif;
+ color: #003366;
+}
+span.rvts14 /* Font Style */
+{
+ font-family: 'Tahoma', 'Geneva', sans-serif;
+ font-style: italic;
+ color: #c0c0c0;
+}
+a.rvts15, span.rvts15 /* Font Style */
+{
+ font-family: 'Tahoma', 'Geneva', sans-serif;
+ font-style: italic;
+ color: #6666ff;
+ text-decoration: underline;
+}
+span.rvts16
+{
+ font-size: 20pt;
+ font-family: 'Segoe UI';
+ font-weight: bold;
+ color: #003366;
+}
+span.rvts17
+{
+ font-size: 12pt;
+ font-family: 'Segoe UI';
+ color: #003366;
+}
+span.rvts18
+{
+ font-size: 12pt;
+ font-family: 'Segoe UI';
+ font-weight: bold;
+ color: #003366;
+}
+span.rvts19
+{
+ font-size: 20pt;
+ font-family: 'Trebuchet MS', 'Helvetica', sans-serif;
+ font-weight: bold;
+ color: #003366;
+}
+span.rvts20
+{
+ font-size: 11pt;
+ font-family: 'Trebuchet MS', 'Helvetica', sans-serif;
+ color: #254356;
+}
+span.rvts21
+{
+ font-family: 'Times New Roman', 'Times', serif;
+}
+span.rvts22
+{
+ font-size: 11pt;
+ font-family: 'Trebuchet MS', 'Helvetica', sans-serif;
+ color: #003366;
+}
+span.rvts23
+{
+ font-size: 11pt;
+ font-family: 'Trebuchet MS', 'Helvetica', sans-serif;
+ font-weight: bold;
+ color: #003366;
+}
+a.rvts24, span.rvts24
+{
+ font-size: 11pt;
+ font-family: 'Trebuchet MS', 'Helvetica', sans-serif;
+ font-weight: bold;
+ color: #003366;
+ text-decoration: none;
+}
+a.rvts25, span.rvts25
+{
+ font-size: 11pt;
+ font-family: 'Trebuchet MS', 'Helvetica', sans-serif;
+ color: #003366;
+ text-decoration: underline;
+}
+span.rvts26
+{
+ font-size: 11pt;
+ font-family: 'Trebuchet MS', 'Helvetica', sans-serif;
+ font-weight: bold;
+ color: #003366;
+}
+span.rvts27
+{
+ font-size: 11pt;
+ font-family: 'Trebuchet MS', 'Helvetica', sans-serif;
+ color: #003366;
+ border-bottom: solid 2px;
+}
+a.rvts28, span.rvts28
+{
+ font-size: 11pt;
+ font-family: 'Trebuchet MS', 'Helvetica', sans-serif;
+ color: #003366;
+ text-decoration: none;
+ border-bottom: solid 2px;
+}
+span.rvts29
+{
+ font-size: 12pt;
+ font-family: 'segoe ui';
+ color: #24292e;
+}
+span.rvts30
+{
+ font-size: 12pt;
+ font-family: 'Trebuchet MS', 'Helvetica', sans-serif;
+ font-weight: bold;
+ color: #003366;
+}
+span.rvts31
+{
+ font-size: 12pt;
+ font-family: 'Trebuchet MS', 'Helvetica', sans-serif;
+ color: #003366;
+}
+span.rvts32
+{
+ font-size: 20pt;
+ font-family: 'Trebuchet MS', 'Helvetica', sans-serif;
+ color: #003366;
+}
+span.rvts33
+{
+ font-family: 'Trebuchet MS', 'Helvetica', sans-serif;
+ color: #003366;
+}
+a.rvts34, span.rvts34
+{
+ font-family: 'Trebuchet MS', 'Helvetica', sans-serif;
+ color: #003366;
+ text-decoration: underline;
+}
+span.rvts35
+{
+ font-family: 'Trebuchet MS', 'Helvetica', sans-serif;
+ color: #ff0000;
+}
+a.rvts36, span.rvts36
+{
+ font-size: 11pt;
+ font-family: 'Trebuchet MS', 'Helvetica', sans-serif;
+ color: #003366;
+ text-decoration: underline;
+}
+span.rvts37
+{
+ font-size: 11pt;
+ font-family: 'Trebuchet MS', 'Helvetica', sans-serif;
+ font-style: italic;
+ font-weight: bold;
+ color: #003366;
+}
+/* ========== Para Styles ========== */
+p,ul,ol /* Paragraph Style */
+{
+ text-align: left;
+ text-indent: 0px;
+ padding: 0px 0px 0px 0px;
+ margin: 0px 0px 0px 0px;
+}
+.rvps1 /* Centered */
+{
+ text-align: center;
+}
+.rvps2
+{
+}
+.rvps3
+{
+ text-align: center;
+}
+.rvps4
+{
+ text-align: left;
+ text-indent: 0px;
+ background: #ffffff;
+ padding: 0px 0px 0px 0px;
+ margin: 20px 0px 10px 0px;
+}
+.rvps5
+{
+ background: #ffffff;
+ margin: 10px 0px 10px 0px;
+}
+.rvps6
+{
+ background: #ffffff;
+ padding: 0px 0px 0px 40px;
+}
+.rvps7
+{
+ text-align: left;
+ text-indent: 0px;
+ page-break-after: avoid;
+ padding: 0px 0px 0px 0px;
+ margin: 16px 0px 4px 0px;
+}
+.rvps8 /* Paragraph Style */
+{
+ text-align: center;
+ border-color: #c0c0c0;
+ border-style: solid;
+ border-width: 1px;
+ border-right: none;
+ border-left: none;
+ padding: 2px 0px 2px 0px;
+ margin: 7px 0px 7px 0px;
+}
+.rvps9
+{
+ text-align: left;
+ text-indent: 0px;
+ border-color: #eaecef;
+ border-style: solid;
+ border-width: 1px;
+ border-top: none;
+ border-right: none;
+ border-left: none;
+ padding: 0px 0px 7px 0px;
+ margin: 23px 0px 15px 0px;
+}
+.rvps10
+{
+ margin: 0px 0px 16px 0px;
+}
+.rvps11
+{
+ margin: 4px 0px 0px 0px;
+}
+.rvps12
+{
+ text-indent: 48px;
+}
+.rvps13
+{
+ text-indent: 48px;
+ margin: 0px 0px 16px 0px;
+}
+/* ========== Lists ========== */
+.list0 {text-indent: 0px; padding: 0; margin: 0 0 0 40px; list-style-position: outside; list-style-type: disc;}
+.list1 {text-indent: 0px; padding: 0; margin: 0 0 0 40px; list-style-position: outside; list-style-type: circle;}
+.list2 {text-indent: 0px; padding: 0; margin: 0 0 0 40px; list-style-position: outside; list-style-type: square;}
+.list3 {text-indent: 0px; padding: 0; margin: 0 0 0 32px; list-style-position: outside; list-style-type: disc;}
+.list4 {text-indent: 0px; padding: 0; margin: 0 0 0 32px; list-style-position: outside; list-style-type: circle;}
+.list5 {text-indent: 0px; padding: 0; margin: 0 0 0 32px; list-style-position: outside; list-style-type: square;}
+.list6 {text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside;}
+.list7 {text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside;}
+.list8 {text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: square;}
+.list9 {text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: disc;}
+.list10 {text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;}
