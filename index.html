@@ -1,0 +1,262 @@
+<html>
+<head>
+<style>
+body
+{
+ margin:0 auto;
+ padding:0px;
+ text-align:left;
+ width:100%;
+ font-family: "Myriad Pro","Helvetica Neue",Helvetica,Arial,Sans-Serif;
+
+ font-family:monospace, serif;
+
+}
+#wrapper
+{
+ margin:0 auto;
+ padding-left:0px;
+ text-align:left;
+ width:100%;
+
+}
+#menu_div
+{
+ padding-top:0px;
+
+ width:220px;
+ height:100%;
+ background-color:#154360;
+ position:fixed;
+ top:0px;
+ left:0px;
+}
+#menu_div li
+{
+ border-bottom:1px solid #A9CCE3;
+ list-style-type:none;
+ text-align:left;
+}
+
+#menu_div li a
+{
+ height:50px;
+ line-height:50px;
+ display:block;
+ color:white;
+ text-decoration:none;
+ font-size:16px;
+ padding-left:20px;
+}
+#menu_div li:hover a
+{
+ color:#A9CCE3;
+}
+#content
+{
+ width:957px;
+ margin-left:5px;
+ margin-top:0px;
+ padding-top:0px;
+ text-align:left;
+ margin-left:230px;
+ position: relative;
+
+}
+#content h4
+{
+
+ font-size:16px;
+
+ color:#000;
+}
+#content h3
+{
+
+ font-size:22px;
+
+ color:#626567;
+}
+#content h2
+{
+ margin-top:50px;
+ font-size:30px;
+
+ color:#626567;
+}
+#content h1 p
+{
+ font-size:18px;
+ width:100%;
+ margin:0px;
+ margin-top:10px;
+}
+#content p
+{
+
+ width:100%;
+ margin-left:50px;
+ font-size:15px;
+}
+#subdata
+{
+
+ width:100%;
+ padding-left:14px;
+ font-size:15px;
+ padding-top:2px;
+}
+
+#content span{
+  text-align: center;
+  font-size: 12px;
+}
+
+
+</style>
+</head>
+<body>
+<div id="wrapper">
+
+<div id='menu_div'>
+  <li><a href="#Introduction">Introduction</a></li>
+  <li><a href="#Overview">Overview</a></li>
+  <li><a href="#GetOVHLDAPAccount">Login</a></li>
+  <li><a href="#ManagingProjects">Managing Projects</a></li>
+  <li><a href="#ManagingUserAccess">Managing User Access</a></li>
+  <li><a href="#ManagingDockerImages">Managing Docker Images</a></li>
+
+  <span style="font-size: 12px; color: white;padding-top: 100%; position:absolute;"> Copyright &copy; HCL Technologies Ltd. &nbsp; &nbsp; &nbsp;All Rights Reserved. <br /><br /> &nbsp; &nbsp;Powered By: HCLDevOpsCOE <br /> &nbsp;Email: <a style="color: white;" href="mailto:MAS_DevOps_Core@hcl.com?Subject=Reg:HCL%20Private%20Docker%20Registry" target="_top">MAS_DevOps_Core@hcl.com</a><br /><br /> &nbsp;  Author: Rohit Shingalapur <br /> </span>
+</div>
+
+<div id="content">
+  <div id="Introduction">
+  <h2>Introduction</h1>
+  <h4>What it is?</h4>
+  <p>The Registry is a stateless, highly scalable server side application that stores and lets you distribute Docker images.</p>
+  <h4>Why use it?</h4>
+  <p>You should use the Registry if you want to:</p>
+
+  <p id="subdata"><b>#</b> Tight control where your images are being stored <br />
+  <b>#</b> Fully own your images distribution pipeline <br />
+    <b>#</b> Integrate image storage and distribution tightly into your in-house development workflow</p>
+
+  <p></p>
+</div>
+<br />
+<hr>
+<div id="Overview">
+   <h2>Overview</h2>
+   <p></p>
+   <h3>Role Based Access Control(RBAC)</h3>
+   <p><img width="613" height="367" alt="" style="padding : 1px;" src="lib/rbac.png"></p>
+   <br/>
+   <p >HCL Private Docker Registry manages docker images through projects. Users can be added into one project as a member with three different roles:</p>
+  <p id="subdata"> <b># Guest:</b> Guest has access only to pull-only docker images privilege for a specified project. <br />
+   <b># Developer:</b> Developer has pull and push docker images privileges for a project.<br />
+   <b># ProjectAdmin:</b> When creating a new project, you will be assigned the "ProjectAdmin" role to the project. Besides push-pull docker images privileges, the "ProjectAdmin" also has some management privileges, such as adding and removing members.<br /></p>
+
+
+   <p>Besides the above three roles, there are two system-wide roles:</p>
+   <p id="subdata"><b># SysAdmin:</b> "SysAdmin" has the most privileges. In addition to the privileges mentioned above, "SysAdmin" can also list all projects, set an ordinary user as administrator and delete users. The public project "library" is also owned by the administrator. <br />
+   <b># Anonymous:</b> When a user is not logged in, the user is considered as an "Anonymous" user. An anonymous user has no access to private projects and has access only to pull docker images from public projects.</p>
+
+   <p></p>
+   <br /><br />
+</div>
+<br />
+<hr>
+<div id="GetOVHLDAPAccount">
+<h2>Login</h2>
+
+<h4>How to Login to HCL Private Docker Registry?</h4>
+<p>To access HCL private docker registry one should have OVH LDAP account. If you don't have one then please follow the below steps:</p>
+<p id="subdata">Open the URL <a href="https://login.common.hclets.com">https://login.common.hclets.com</a>and click on <a class="rvts24" href="https://common.hclets.com/?action=sendtoken">Forgot/First time login</a>. Then follow the instructions displayed on "Reset your Password" page.
+
+<p><img width="324" height="225" alt="" style="padding : 1px;" src="lib/ldap1.png"><img width="344" height="200" alt="" style="padding : 1px;" src="lib/forgotpassword.png"></p>
+</div>
+<br />
+<hr>
+
+<div id="ManagingProjects">
+<h2>Managing Projects</h2>
+
+
+<p>A project in HCL Private Docker Registry contains all repositories of an application. No images can be pushed to HCL Private Docker Registry before the project is created. RBAC is applied to a project. <br /><br />There are two types of projects in HCL Private Docker Registry:</p>
+
+<p id="subdata"><b># Public:</b> All users have the read privilege to a public project, it's convenient for you to share some repositories with others in this way.<br />
+<b># Private:</b> A private project can only be accessed by users with proper privileges.</p>
+
+<p>You can create a project after you signed in. Enabling the "Public" checkbox will make this project public</p>
+
+<br/>
+<p> <b>Steps to be followed to create a project:</b></p>
+
+<p id="subdata"><b>Step 1:</b> Login to <a class="rvts28" href="https://dockerregistry.hclets.com" target="_blank">HCL Private Docker Registry</a><br />
+<b>Step 2:</b> Click on <img alt="" style="padding : 1px;" src="lib/projects.png"> which is available in the header then click on <img width="112" height="34" alt="" style="padding : 1px;" src="lib/newproject.png"> <br /><br />
+<b>Step 3:</b> Enter the project name (check the check box to make it public) and then click on save. <img width="836" height="57" alt="" style="padding : 1px;" src="lib/saveproject.png"> <br />
+Note: Project name must be unique name.<br /><br />
+<b>Step 4: </b> If you haven't made project as public while creating or in Step 3 then you can make it public and private by making it on/off option: <br />
+<img alt="" style="padding : 1px;" src="lib/public.png"><br /><br /> </p>
+<p>To delete the project click on <img alt="" style="padding : 1px;" src="lib/delete.png"> available under <img alt="" style="padding : 1px;" src="lib/operation.png"></p>
+</div>
+<br />
+<hr>
+
+<div id="ManagingUserAccess">
+
+            <h2>Managing User Access</h2>
+
+
+<p>Owner of the project can add/remove members to the project and can promote or demote the roles of existing users.</p>
+<p>A member when added to the project he/she can be granted anyone of the below role:</p>
+
+<p id="subdata"><b># Guest: </b> Guest has access only to pull docker images for a specified project. <br />
+<b># Developer:</b> Developer has push and pull docker images privileges for a project.<br />
+<b># ProjectAdmin:</b> When creating a new project, you will be assigned the "ProjectAdmin" role to the project. Besides push-pull docker images privileges, the "ProjectAdmin" also has some management privileges, such as adding and removing members.<br />
+<br/>
+
+<p><b>To add or remove a member follow the following steps:</b></p>
+
+<p id="subdata">
+<b>Step 1:</b> Login to <a class="rvts28" href="https://dockerregistry.hclets.com" target="_blank">HCL Private Docker Registry</a> <br />
+<b>Step 2:</b> Click on <img alt="" style="padding : 1px;" src="lib/projects.png"> which is available in the header, then click on respective project. <br />
+<b>Step 3:</b> Then click on <img alt="" style="padding : 1px;" src="lib/users.png"> to manage users - edit the roles of existing users, delete the user access to project and to add a new user you need to search that user in the text box <img alt="" style="padding : 1px;" src="lib/Adduser.png"> then click on add member. <br />
+ <br />
+</span><img alt="" style="padding : 1px;" width="900px" src="lib/usersmgmt.png"></p>
+
+<p style="color:Red;font-weight: bold;">[ NOTE: Only those users who have made atleast one successful login into HCL Private Docker Registry via web browser are eligible to be member of a project. ]</p>
+</div>
+<br />
+<hr>
+
+<div id="ManagingDockerImages">
+            <h2>Managing Docker Images</h2>
+
+<h3>How to push Docker images to HCL Private Docker Registry?</h3>
+<p>To push a docker image to HCL Private Docker Registry follow the following steps:</p>
+<p id="subdata"><b>Step 1:</b> Create a project in HCL Private Docker Registry via web browser using URL <a class="rvts36" href="https://dockerregistry.hclets.com" target="_blank">https://dockerregistry.hclets.com</a><span> <br/><br/>[ For more information visit <a href="#ManagingProjects">Managing Project</a> ] (Skip this step if you have already created project or have proper privileges to existing project)</span> <br /><br />
+<b>Step 2:</b> Login to HCL Private Docker Registry via Docker using command <b>docker login https://dockerregistry.hclets.com </b>
+ <br /><br /><span>[ Enter your OVH LDAP username and password when prompted for the same ] [ For more information on docker login visit <a  href="https://docs.docker.com/engine/reference/commandline/login/">Docker Docs</a> ] </span><br /><br />
+<b>Step 3:</b> Now tag the docker image that you want to push to HCL Private Docker Registry using docker command <br /> <b>docker tag &lt;image_name&gt; dockerregistry.hclets.com/&lt;project_name&gt;/&lt;image_name&gt;:&lt;version&gt;</b><br /> For example if you want to push tomcat docker image then tag it using the command: <br /><b>docker tag tomcat dockerregistry.hclets.com/hcldevops/tomcat:7.0</b> <br /><br />
+<span> [ For more information on docker tag visit <a href="https://docs.docker.com/engine/reference/commandline/tag/">Docker Docs</a> ]</span><br /><br />
+<b>Step 4:</b> Once the docker image has been tagged then perform a push to HCL Private Docker Registry using docker command <b>docker push &lt;image_name&gt;</b> For example, <b>docker push dockerregistry.hclets.com/hcldevops/tomcat:7.0</b><br /><br />
+<span>[ For more information on docker push visit <a href="https://docs.docker.com/engine/reference/commandline/push/">Docker Docs</a> ]</span><br /><br />
+<b>Step 5:</b> Now login to HCL Private Docker Registry via web browser and you will be able to see docker image <b>tomcat:7.0 </b> listed under the project<b> hcldevops</b> <br /><br />
+<p><img alt="" style="padding : 1px;" src="lib/NewItem1.png" width="995px"></p>
+
+<br />
+<h3>How to pull Docker images from HCL Private Docker Registry?</h3>
+<b>To pull a docker image from HCL Private Docker Registry follow the following steps:</b>
+<p id="subdata"><b>Step 1:</b> Login to HCL Private Docker Registry via Docker using command <b>docker login https://dockerregistry.hclets.com </b> <br /> <br />
+<span> [ Enter your OVH LDAP username and password when prompted for the same ] [ For more information on docker login visit <a href="https://docs.docker.com/engine/reference/commandline/login/">Docker Docs</a> ]</span><br /> <br />
+<b>Step 2:</b> Now execute the docker pull command <b>docker pull &lt;image_name&gt;</b> For example if you want to pull tomcat docker image then use the command <b>docker pull dockerregistry.hclets.com/hcldevops/tomcat:7.0</b><br /> <br />
+<span> [ For more information on docker pull visit <a href="https://docs.docker.com/engine/reference/commandline/pull/">Docker Docs</a> ]</span><br /> <br />
+
+<p><img alt="" style="padding : 1px;" src="lib/NewItem3.png" width="700px"></p>
+</div>
+<br />
+<hr>
+</div>
+</body>
+</html>
